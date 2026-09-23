@@ -24,11 +24,11 @@ Para repositórios GitHub, você pode usar o raw URL:
 bash <(curl -s https://raw.githubusercontent.com/SEU-USUARIO/SEU-REPO/main/install.sh)
 ```
 
-**Importante:** Você precisa atualizar todas as URLs dentro dos scripts:
+**Importante:** Você precisa atualizar as URLs dentro dos scripts:
 
 1. Abra `install.sh`
-2. Encontre: `export GITHUB_BASE_URL="https://raw.githubusercontent.com/SEUGITHUB/blackhosting-pterodactyl-installer"`
-3. Substitua `SEUGITHUB` pelo seu usuário do GitHub
+2. Encontre: `export GITHUB_BASE_URL="https://raw.githubusercontent.com/V3noxDev/pterodactyl-auto-installer"`
+3. Substitua pelo seu: `export GITHUB_BASE_URL="https://raw.githubusercontent.com/SEU-USUARIO/SEU-REPO"`
 4. Faça o mesmo em `lib/lib.sh`
 
 ## Opção 2: Hospedagem em Servidor Web Próprio

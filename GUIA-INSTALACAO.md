@@ -14,10 +14,8 @@
 Para começar a instalação, execute como root:
 
 ```bash
-bash <(curl -s https://SEU-DOMINIO.com.br/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/V3noxDev/pterodactyl-auto-installer/main/install.sh)
 ```
-
-**Nota:** Você precisará hospedar este script em um servidor web acessível pela internet.
 
 ### Opções de Instalação
 

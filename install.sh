@@ -31,7 +31,7 @@ set -e
 
 export GITHUB_SOURCE="v1.3.0"
 export SCRIPT_RELEASE="v1.0.0-blackhosting"
-export GITHUB_BASE_URL="https://raw.githubusercontent.com/SEUGITHUB/blackhosting-pterodactyl-installer"
+export GITHUB_BASE_URL="https://raw.githubusercontent.com/V3noxDev/pterodactyl-auto-installer"
 
 LOG_PATH="/var/log/pterodactyl-installer-blackhosting.log"
 
