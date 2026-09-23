@@ -44,14 +44,14 @@ fi
 
 # Sempre remove lib.sh antes de baixar
 [ -f /tmp/lib.sh ] && rm -rf /tmp/lib.sh
-curl -sSL -o /tmp/lib.sh "$GITHUB_BASE_URL"/master/lib/lib.sh
+curl -sSL -o /tmp/lib.sh "$GITHUB_BASE_URL"/main/lib/lib.sh
 # shellcheck source=lib/lib.sh
 source /tmp/lib.sh
 
 execute() {
   echo -e "\n\n* instalador-pterodactyl-blackhosting $(date) \n\n" >>$LOG_PATH
 
-  [[ "$1" == *"canary"* ]] && export GITHUB_SOURCE="master" && export SCRIPT_RELEASE="canary"
+  [[ "$1" == *"canary"* ]] && export GITHUB_SOURCE="main" && export SCRIPT_RELEASE="canary"
   update_lib_source
   run_ui "${1//_canary/}" |& tee -a $LOG_PATH
 

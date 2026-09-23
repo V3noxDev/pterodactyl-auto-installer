@@ -17,7 +17,7 @@ set -e
 # ------------------ Variáveis ----------------- #
 
 # Versionamento
-export GITHUB_SOURCE=${GITHUB_SOURCE:-master}
+export GITHUB_SOURCE=${GITHUB_SOURCE:-main}
 export SCRIPT_RELEASE=${SCRIPT_RELEASE:-canary}
 
 # Versões do Pterodactyl
