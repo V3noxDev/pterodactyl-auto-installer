@@ -64,7 +64,17 @@ fi
 
 install_composer() {
   output "Instalando composer..."
-  curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+  
+  case "$OS" in
+    ubuntu | debian)
+      install_packages "composer"
+      ;;
+    rocky | almalinux)
+      # Para RHEL/Rocky/Alma usar o método oficial
+      curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+      ;;
+  esac
+  
   success "Composer instalado!"
 }
 
