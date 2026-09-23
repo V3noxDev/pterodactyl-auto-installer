@@ -140,17 +140,17 @@ get_latest_versions() {
 update_lib_source() {
   GITHUB_URL="$GITHUB_BASE_URL/$GITHUB_SOURCE"
   rm -rf /tmp/lib.sh
-  curl -sSL -o /tmp/lib.sh "$GITHUB_URL"/lib/lib.sh
+  curl -sSL -o /tmp/lib.sh "$GITHUB_URL/lib/lib.sh?$(date +%s)"
   # shellcheck source=lib/lib.sh
   source /tmp/lib.sh
 }
 
 run_installer() {
-  bash <(curl -sSL "$GITHUB_URL/installers/$1.sh")
+  bash <(curl -sSL "$GITHUB_URL/installers/$1.sh?$(date +%s)")
 }
 
 run_ui() {
-  bash <(curl -sSL "$GITHUB_URL/ui/$1.sh")
+  bash <(curl -sSL "$GITHUB_URL/ui/$1.sh?$(date +%s)")
 }
 
 array_contains_element() {
