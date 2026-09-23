@@ -44,7 +44,13 @@ fi
 
 # Sempre remove lib.sh antes de baixar
 [ -f /tmp/lib.sh ] && rm -rf /tmp/lib.sh
-curl -sSL -o /tmp/lib.sh "$GITHUB_BASE_URL/main/lib/lib.sh?$(date +%s)"
+LIB_URL="$GITHUB_BASE_URL/main/lib/lib.sh"
+echo "* Baixando lib.sh de: $LIB_URL"
+if ! curl -sSLf -o /tmp/lib.sh "$LIB_URL?$(date +%s)"; then
+  echo "* ERRO: Não foi possível baixar $LIB_URL"
+  echo "* Verifique sua conexão com a internet e tente novamente."
+  exit 1
+fi
 # shellcheck source=lib/lib.sh
 source /tmp/lib.sh
 
