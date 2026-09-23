@@ -1,0 +1,30 @@
+# Logs
+*.log
+/var/log/
+
+# Temporary files
+*.tmp
+/tmp/
+
+# Backups
+*.bak
+*.backup
+
+# OS files
+.DS_Store
+Thumbs.db
+*~
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Vagrant
+.vagrant/
+*.box
+
+# Testing
+test/
+.env
